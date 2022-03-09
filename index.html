@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- map  -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -106,9 +111,9 @@
           <div class="container py-5">
               <div class="row align-items-center justify-content-between">
                <div class="col-md-6">
-                   <img class="img-fluid w-75" src="img/fundamentals.svg" alt="">
+                   <img class="img-fluid w-75 mt-4" src="img/fundamentals.svg" alt="">
                </div>
-               <div class="col-6 align-items-center justify-content-between">
+               <div class="col-md-6">
                    <h3>Learn The Fundamentals</h3>
                    <p class="lead mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolore.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium enim iste, magni vitae officiis Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, ipsa?</p>
@@ -129,7 +134,7 @@
                <button class="btn btn-light"><i class="bi bi-chevron-right"> </i>Read More</button>
               </div>
               <div class="col-md-6">
-               <img class="img-fluid w-75" src="img/react.svg" alt="">
+               <img class="img-fluid w-75 mt-4" src="img/react.svg" alt="">
            </div>
              </div>
             </div>
@@ -341,6 +346,58 @@
           </div>
       </section>
 
+      <section>
+          <div class="container py-5">
+              <div class="row">
+                  <div class="col-md text-center align-items-center justify-content-between">
+                      <h3>Contact Info</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location: </span>50 Main st Boston MA
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone: </span>
+                            (555) 333-3333
+
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Phone: </span>(333) 333-3333
+
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Email: </span>(555) enroll@frontendbc.test
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Email: </span>student@frontendbc.test
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-md">
+                    <div id='map' style='width: 100%; height: 100%; border-radius: 10px;'></div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section>
+          <div class="bg-dark text-center text-light">
+            <div class="container py-5 ">     
+                 <h6> Copyright &copy; Arafat Frontend Bootcamp</h6>
+            </div>
+          </div>
+         
+      </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFnaWMxMjAiLCJhIjoiY2wwanFjOXZvMGY1MTNmcWt6MjloOHB4MiJ9.bV-xqjyT_v6EtET9F8XmkA';
+var map = new mapboxgl.Map({
+container: 'map',
+
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [23.9773833,89.8580795],
+});
+    </script>
 </body>
 </html>
